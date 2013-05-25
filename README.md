@@ -27,3 +27,23 @@ Bash script
 #!/usr/bin/env bash
 #put example here
 ```
+
+Workflow
+--------
+
+_will change, this is a generalized overview_
+
+`dotegg` _will be_ a POSIX app and can be expected to work many ways and utilize Unix pipes and workflows.
+
+`dotegg in.jpg` or `dotegg < in.jpg` or `cat in.jpg |dotegg`
+
+`dotegg` will generate a new `.egg` file that will be output in the current working directory. 
+
+
+The filename length of a `.egg` will always be 35 characters long. That is because the length of a `md5` sum is always 32 characters and we will always append `.egg` as well.
+
+    in.jpg
+    
+becomes
+    
+    764efa883dda1e11db47671c4a3bbd9e.egg
