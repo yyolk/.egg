@@ -16,7 +16,7 @@ The second part is a checksum. Checksums are a quick an efficient way to compute
 
 Often, this is done with `md5`.
 
-`.egg` = `md5` checksum + `.tar.gz`/`.bz2`/`.7z`/…
+`.egg` = `md5 checksum` + `.tar.gz`/`.bz2`/`.7z`/…
 --------------------------------------------------
 
 By sending a file in a `.egg` a simple bash script could compute the file, since the filename is simply the `md5` sum appended with `.egg` (instead of the extension of whatever archive type it is; multiple formats could be supported but would require a file-check of some-type or the addition of metadata.)
