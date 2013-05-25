@@ -24,7 +24,7 @@ By sending a file in a `.egg` a simple bash script could compute the file, since
 Bash script `doteggcheck.sh *.egg`
 
 ```bash
-#!/usr/bin/env bash
+#!/bin/bash
 
 md5 $1 | awk '{print $4}' | diff <(echo "`basename $1 .egg`") -
 ```
