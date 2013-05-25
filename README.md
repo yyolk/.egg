@@ -21,12 +21,15 @@ Often, this is done with `md5`.
 
 By sending a file in a `.egg` a simple bash script could compute the file, since the filename is simply the `md5` sum appended with `.egg` (instead of the extension of whatever archive type it is; multiple formats could be supported but would require a file-check of some-type or the addition of metadata.)
 
-Bash script
+Bash script `doteggcheck.sh *.egg`
 
 ```bash
 #!/usr/bin/env bash
-#put example here
+
+md5 $1 | awk '{print $4}' | diff <(echo "`basename $1 .egg`") -
 ```
+
+
 
 Workflow
 --------
